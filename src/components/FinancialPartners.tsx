@@ -1,17 +1,28 @@
 import { Landmark, TrendingUp, Shield, CheckCircle } from 'lucide-react';
+import tataCapital from "../assets/images/tata capital.png";
+import poonawalla from "../assets/images/poonawala.jpg";
+import prodigy from "../assets/images/prodigy bank.png";
+import icc from "../assets/images/icici.jpg";  
+import axis from "../assets/images/axis bank.jpg";
+import idfc from "../assets/images/idfc first bank.png";
+import incred from "../assets/images/incred.jpg";
+import avanse from "../assets/images/avanse bank.png";
+import credila from "../assets/images/credils bsnk.png";
+import auxilo from "../assets/images/auxilo bank.png";
+import mpower from "../assets/images/mpower.png";
 
 const partners = [
-  { name: "Tata Capital", logo: "/tata_capital.png" },
-  { name: "Poonawalla Fincorp", logo: "/poonawala.jpg" },
-  { name: "ICICI Bank", logo: "https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg?auto=compress&cs=tinysrgb&w=200" },
-  { name: "Axis Bank", logo: "https://images.pexels.com/photos/259200/pexels-photo-259200.jpeg?auto=compress&cs=tinysrgb&w=200" },
-  { name: "IDFC First Bank", logo: "https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?auto=compress&cs=tinysrgb&w=200" },
-  { name: "InCred", logo: "https://images.pexels.com/photos/6693655/pexels-photo-6693655.jpeg?auto=compress&cs=tinysrgb&w=200" },
-  { name: "Avanse", logo: "https://images.pexels.com/photos/6693661/pexels-photo-6693661.jpeg?auto=compress&cs=tinysrgb&w=200" },
-  { name: "Credila", logo: "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=200" },
-  { name: "Auxilo", logo: "https://images.pexels.com/photos/7681464/pexels-photo-7681464.jpeg?auto=compress&cs=tinysrgb&w=200" },
-  { name: "MPower Financing", logo: "https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=200" },
-  { name: "Prodigy Finance", logo: "/prodigy_bank.png" }
+  { name: "Tata Capital", logo: tataCapital },
+  { name: "Poonawalla Fincorp", logo: poonawalla },
+  { name: "Prodigy Finance", logo: prodigy },
+  { name: "ICICI Bank", logo: icc },
+  { name: "Axis Bank", logo: axis },
+  { name: "IDFC First Bank", logo: idfc },
+  { name: "InCred", logo: incred },
+  { name: "Avanse", logo: avanse },
+  { name: "Credila", logo: credila },
+  { name: "Auxilo", logo: auxilo },
+  { name: "MPower Financing", logo: mpower },
 ];
 
 const benefits = [
@@ -79,7 +90,7 @@ export default function FinancialPartners() {
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-h-16 w-auto object-contain grayscale group-hover:grayscale-0 transition opacity-70 group-hover:opacity-100"
+                  className="max-h-16 w-auto object-contain  group-hover:grayscale-0 transition opacity-90 group-hover:opacity-100"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.style.display = 'none';
