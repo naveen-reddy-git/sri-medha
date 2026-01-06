@@ -1,4 +1,5 @@
 import { GraduationCap, MapPin, Building2, DollarSign } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const countries = [
   {
@@ -8,7 +9,8 @@ const countries = [
     students: "1M+ International",
     cost: "$25k-$55k/year",
     image: "https://images.pexels.com/photos/378570/pexels-photo-378570.jpeg?auto=compress&cs=tinysrgb&w=800",
-    highlights: ["World-class universities", "Research opportunities", "OPT work permits"]
+    highlights: ["World-class universities", "Research opportunities", "OPT work permits"],
+    route: "/study-in-usa"
   },
   {
     name: "United Kingdom",
@@ -17,7 +19,8 @@ const countries = [
     students: "600K+ International",
     cost: "£10k-£38k/year",
     image: "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=800",
-    highlights: ["1-year master's programs", "Rich cultural heritage", "Post-study work visa"]
+    highlights: ["1-year master's programs", "Rich cultural heritage", "Post-study work visa"],
+    route: "/study-in-uk"
   },
   {
     name: "Canada",
@@ -26,7 +29,8 @@ const countries = [
     students: "800K+ International",
     cost: "CAD 15k-35k/year",
     image: "https://images.pexels.com/photos/2994920/pexels-photo-2994920.jpeg?auto=compress&cs=tinysrgb&w=800",
-    highlights: ["PR pathways", "Safe & welcoming", "Quality education"]
+    highlights: ["PR pathways", "Safe & welcoming", "Quality education"],
+    route: "/study-in-canada"
   },
   {
     name: "Australia",
@@ -35,7 +39,8 @@ const countries = [
     students: "700K+ International",
     cost: "AUD 20k-45k/year",
     image: "https://images.pexels.com/photos/995764/pexels-photo-995764.jpeg?auto=compress&cs=tinysrgb&w=800",
-    highlights: ["Work while studying", "Beautiful lifestyle", "Global recognition"]
+    highlights: ["Work while studying", "Beautiful lifestyle", "Global recognition"],
+    route: "/study-in-australia"
   },
   {
     name: "Ireland",
@@ -44,7 +49,8 @@ const countries = [
     students: "35K+ International",
     cost: "€9k-25k/year",
     image: "https://images.pexels.com/photos/2416653/pexels-photo-2416653.jpeg?auto=compress&cs=tinysrgb&w=800",
-    highlights: ["Tech hub of Europe", "English-speaking", "Stay-back options"]
+    highlights: ["Tech hub of Europe", "English-speaking", "Stay-back options"],
+    route: "/study-in-ireland"
   },
   {
     name: "France",
@@ -53,7 +59,8 @@ const countries = [
     students: "370K+ International",
     cost: "€3k-15k/year",
     image: "https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=800",
-    highlights: ["Affordable education", "Art & culture", "EU opportunities"]
+    highlights: ["Affordable education", "Art & culture", "EU opportunities"],
+    route: "/study-in-france"
   }
 ];
 
@@ -127,9 +134,9 @@ export default function Countries() {
                   </ul>
                 </div>
 
-                <button className="mt-6 w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition font-medium">
+                <Link to={country.route} className="mt-6 w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition font-medium text-center block">
                   Explore Programs
-                </button>
+                </Link>
               </div>
             </div>
           ))}

@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import SuccessStories from './components/SuccessStories';
@@ -6,10 +7,16 @@ import Countries from './components/Countries';
 import FinancialPartners from './components/FinancialPartners';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import StudyInUSA from './pages/StudyInUSA';
+import StudyInUK from './pages/StudyInUK';
+import StudyInCanada from './pages/StudyInCanada';
+import StudyInAustralia from './pages/StudyInAustralia';
+import StudyInIreland from './pages/StudyInIreland';
+import StudyInFrance from './pages/StudyInFrance';
 
-function App() {
+function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Header />
       <Hero />
       <SuccessStories />
@@ -18,7 +25,25 @@ function App() {
       <FinancialPartners />
       <ContactForm />
       <Footer />
-    </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen bg-white">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/study-in-usa" element={<StudyInUSA />} />
+          <Route path="/study-in-uk" element={<StudyInUK />} />
+          <Route path="/study-in-canada" element={<StudyInCanada />} />
+          <Route path="/study-in-australia" element={<StudyInAustralia />} />
+          <Route path="/study-in-ireland" element={<StudyInIreland />} />
+          <Route path="/study-in-france" element={<StudyInFrance />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
