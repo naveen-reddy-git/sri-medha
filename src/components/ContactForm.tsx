@@ -40,8 +40,19 @@ export default function ContactForm() {
 
     try {
       const { error } = await supabase
-        .from('student_enquiries')
-        .insert([formData]);
+        .from('registration')
+        .insert([
+          {
+            name: formData.full_name,
+            email: formData.email,
+            phone: formData.phone,
+            country: formData.country,
+            course: formData.course,
+            education_level: formData.education_level,
+            planning_year: formData.study_timeline,
+            info: formData.message
+          }
+        ]);
 
       if (error) throw error;
 
