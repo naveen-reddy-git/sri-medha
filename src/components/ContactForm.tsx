@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import { Send, CheckCircle, Loader } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+import {
+  COUNTRIES,
+  COURSES,
+  EDUCATION_LEVELS,
+  STUDY_TIMELINES,
+  EDUCATION_FUNDS
+} from '../constants/formOptions';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -11,6 +18,8 @@ export default function ContactForm() {
     course: '',
     education_level: '',
     study_timeline: '',
+    budget: '',
+    exam_scores: '',
     message: ''
   });
 
@@ -56,6 +65,8 @@ export default function ContactForm() {
         course: '',
         education_level: '',
         study_timeline: '',
+        budget: '',
+        exam_scores: '',
         message: ''
       });
 
@@ -162,14 +173,11 @@ export default function ContactForm() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition"
                     >
                       <option value="">Select Country</option>
-                      <option value="USA">United States</option>
-                      <option value="UK">United Kingdom</option>
-                      <option value="Canada">Canada</option>
-                      <option value="Australia">Australia</option>
-                      <option value="Ireland">Ireland</option>
-                      <option value="France">France</option>
-                      <option value="Germany">Germany</option>
-                      <option value="New Zealand">New Zealand</option>
+                      {COUNTRIES.map((country) => (
+                        <option key={country.key} value={country.key}>
+                          {country.name}
+                        </option>
+                      ))}
                     </select>
                   </div>
 
@@ -186,14 +194,11 @@ export default function ContactForm() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition"
                     >
                       <option value="">Select Course</option>
-                      <option value="Engineering">Engineering</option>
-                      <option value="Computer Science">Computer Science</option>
-                      <option value="Business/MBA">Business/MBA</option>
-                      <option value="Medicine">Medicine</option>
-                      <option value="Law">Law</option>
-                      <option value="Arts & Humanities">Arts & Humanities</option>
-                      <option value="Sciences">Sciences</option>
-                      <option value="Other">Other</option>
+                      {COURSES.map((course) => (
+                        <option key={course.key} value={course.key}>
+                          {course.name}
+                        </option>
+                      ))}
                     </select>
                   </div>
 
@@ -210,11 +215,11 @@ export default function ContactForm() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition"
                     >
                       <option value="">Select Level</option>
-                      <option value="12th Grade">12th Grade</option>
-                      <option value="Undergraduate">Undergraduate</option>
-                      <option value="Graduate">Graduate</option>
-                      <option value="Postgraduate">Postgraduate</option>
-                      <option value="Working Professional">Working Professional</option>
+                      {EDUCATION_LEVELS.map((level) => (
+                        <option key={level.key} value={level.key}>
+                          {level.name}
+                        </option>
+                      ))}
                     </select>
                   </div>
 
@@ -231,10 +236,32 @@ export default function ContactForm() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition"
                     >
                       <option value="">Select Timeline</option>
-                      <option value="2025">2025</option>
-                      <option value="2026">2026</option>
-                      <option value="2027">2027</option>
-                      <option value="Not Sure">Not Sure Yet</option>
+                      {STUDY_TIMELINES.map((timeline) => (
+                        <option key={timeline.key} value={timeline.key}>
+                          {timeline.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
+                      Education Fund *
+                    </label>
+                    <select
+                      id="budget"
+                      name="budget"
+                      required
+                      value={formData.budget}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition"
+                    >
+                      <option value="">Select Education Fund</option>
+                      {EDUCATION_FUNDS.map((fund) => (
+                        <option key={fund.key} value={fund.key}>
+                          {fund.name}
+                        </option>
+                      ))}
                     </select>
                   </div>
 

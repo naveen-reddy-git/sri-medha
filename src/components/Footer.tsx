@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -50,12 +51,36 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Popular Destinations</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li>Study in USA</li>
-              <li>Study in UK</li>
-              <li>Study in Canada</li>
-              <li>Study in Australia</li>
-              <li>Study in Ireland</li>
-              <li>Study in France</li>
+              <li>
+                <Link to="/study-in-usa" className="hover:text-teal-400 transition">
+                  Study in USA
+                </Link>
+              </li>
+              <li>
+                <Link to="/study-in-uk" className="hover:text-teal-400 transition">
+                  Study in UK
+                </Link>
+              </li>
+              <li>
+                <Link to="/study-in-canada" className="hover:text-teal-400 transition">
+                  Study in Canada
+                </Link>
+              </li>
+              <li>
+                <Link to="/study-in-australia" className="hover:text-teal-400 transition">
+                  Study in Australia
+                </Link>
+              </li>
+              <li>
+                <Link to="/study-in-ireland" className="hover:text-teal-400 transition">
+                  Study in Ireland
+                </Link>
+              </li>
+              <li>
+                <Link to="/study-in-france" className="hover:text-teal-400 transition">
+                  Study in France
+                </Link>
+              </li>
             </ul>
           </div>
 
