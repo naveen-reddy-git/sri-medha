@@ -13,6 +13,8 @@ import StudyInCanada from './pages/StudyInCanada';
 import StudyInAustralia from './pages/StudyInAustralia';
 import StudyInIreland from './pages/StudyInIreland';
 import StudyInFrance from './pages/StudyInFrance';
+import EducationLoanRefinance from './pages/EducationLoanRefinance';  
+import StudentEnquiries from "./pages/StudentEnquiries";
 
 function Home() {
   return (
@@ -41,6 +43,8 @@ function App() {
           <Route path="/study-in-australia" element={<StudyInAustralia />} />
           <Route path="/study-in-ireland" element={<StudyInIreland />} />
           <Route path="/study-in-france" element={<StudyInFrance />} />
+          <Route path="/refinance-page" element={<EducationLoanRefinance />} />
+          <Route path="/admin/student-enquiries" element={<StudentEnquiries />}/>
         </Routes>
       </div>
     </Router>
