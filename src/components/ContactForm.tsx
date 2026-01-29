@@ -1,3 +1,4 @@
+// src/components/ContactForm.tsx
 import { useState } from 'react';
 import { Send, CheckCircle, Loader } from 'lucide-react';
 import { supabase } from '../lib/supabase';
@@ -40,19 +41,19 @@ export default function ContactForm() {
 
     try {
       const { error } = await supabase
-        .from('registration')
-        .insert([
-          {
-            name: formData.full_name,
-            email: formData.email,
-            phone: formData.phone,
-            country: formData.country,
-            course: formData.course,
-            education_level: formData.education_level,
-            planning_year: formData.study_timeline,
-            info: formData.message
-          }
-        ]);
+        .from('enquiries') // <-- make sure your table name matches exactly in Supabase
+        .insert([{
+          full_name: formData.full_name,
+          email: formData.email,
+          phone: formData.phone,
+          country: formData.country,
+          course: formData.course,
+          education_level: formData.education_level,
+          study_timeline: formData.study_timeline,
+          budget: formData.budget,
+          exam_scores: formData.exam_scores,
+          additional_info: formData.message
+        }]);
 
       if (error) throw error;
 
@@ -111,7 +112,9 @@ export default function ContactForm() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* FORM FIELDS (exact same as shared by you) */}
                 <div className="grid md:grid-cols-2 gap-6">
+                  {/* Full Name */}
                   <div>
                     <label htmlFor="full_name" className="block text-sm font-medium text-gray-700 mb-2">
                       Full Name *
@@ -127,7 +130,7 @@ export default function ContactForm() {
                       placeholder="Enter your full name"
                     />
                   </div>
-
+                  {/* Email */}
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address *
@@ -143,7 +146,7 @@ export default function ContactForm() {
                       placeholder="your.email@example.com"
                     />
                   </div>
-
+                  {/* Phone */}
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                       Phone Number *
@@ -159,7 +162,7 @@ export default function ContactForm() {
                       placeholder="+91 98765 43210"
                     />
                   </div>
-
+                  {/* Country */}
                   <div>
                     <label htmlFor="country" className="block text-sm font-medium text-gray-700 mb-2">
                       Preferred Country *
@@ -180,7 +183,7 @@ export default function ContactForm() {
                       ))}
                     </select>
                   </div>
-
+                  {/* Course */}
                   <div>
                     <label htmlFor="course" className="block text-sm font-medium text-gray-700 mb-2">
                       Preferred Course *
@@ -201,7 +204,7 @@ export default function ContactForm() {
                       ))}
                     </select>
                   </div>
-
+                  {/* Education Level */}
                   <div>
                     <label htmlFor="education_level" className="block text-sm font-medium text-gray-700 mb-2">
                       Current Education Level *
@@ -222,7 +225,7 @@ export default function ContactForm() {
                       ))}
                     </select>
                   </div>
-
+                  {/* Study Timeline */}
                   <div>
                     <label htmlFor="study_timeline" className="block text-sm font-medium text-gray-700 mb-2">
                       When do you plan to study? *
@@ -243,7 +246,7 @@ export default function ContactForm() {
                       ))}
                     </select>
                   </div>
-
+                  {/* Budget */}
                   <div>
                     <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
                       Education Fund *
@@ -265,6 +268,7 @@ export default function ContactForm() {
                     </select>
                   </div>
 
+                  {/* Additional Info */}
                   <div className="md:col-span-2">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                       Additional Information
