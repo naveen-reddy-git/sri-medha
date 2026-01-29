@@ -1,8 +1,10 @@
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navigate = useNavigate();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -32,6 +34,7 @@ export default function Header() {
             <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-teal-600 transition">Home</button>
             <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-teal-600 transition">About</button>
             <button onClick={() => scrollToSection('countries')} className="text-gray-700 hover:text-teal-600 transition">Countries</button>
+            <button onClick={() => {navigate("/refinance-page"); setIsMenuOpen(false);}} className="text-gray-700 hover:text-teal-600 transition">Education Refinance</button>   
             <button onClick={() => scrollToSection('partners')} className="text-gray-700 hover:text-teal-600 transition">Partners</button>
             <button onClick={() => scrollToSection('contact')} className="bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition">Contact</button>
           </nav>
@@ -50,6 +53,7 @@ export default function Header() {
               <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-teal-600 transition py-2">Home</button>
               <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-teal-600 transition py-2">About</button>
               <button onClick={() => scrollToSection('countries')} className="text-gray-700 hover:text-teal-600 transition py-2">Countries</button>
+              <button onClick={() => {navigate("/refinance-page"); setIsMenuOpen(false);}} className="text-gray-700 hover:text-teal-600 transition py-2">Education Refinance</button>   
               <button onClick={() => scrollToSection('partners')} className="text-gray-700 hover:text-teal-600 transition py-2">Partners</button>
               <button onClick={() => scrollToSection('contact')} className="bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition">Contact</button>
             </div>

@@ -44,7 +44,7 @@ function App() {
           <Route path="/study-in-ireland" element={<StudyInIreland />} />
           <Route path="/study-in-france" element={<StudyInFrance />} />
           <Route path="/refinance-page" element={<EducationLoanRefinance />} />
-          <Route path="/admin/student-enquiries" element={<StudentEnquiries />}/>
+          <Route path="/student-enquiries" element={<StudentEnquiries />}/>
         </Routes>
       </div>
     </Router>
