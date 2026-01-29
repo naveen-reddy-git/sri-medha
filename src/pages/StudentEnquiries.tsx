@@ -50,20 +50,21 @@ export default function StudentEnquiries() {
   };
 
   // Helper functions to get name from key
-  const getCountryName = (key: string) =>
-    COUNTRIES.find((c) => c.key === key)?.name || key;
+  const getCountryName = (key: number) =>
+    COUNTRIES.find((c) => c.key === key)?.name || String(key);
 
-  const getCourseName = (key: string) =>
-    COURSES.find((c) => c.key === key)?.name || key;
+  const getCourseName = (key: number) =>
+    COURSES.find((c) => c.key === key)?.name || String(key);
 
-  const getEducationLevelName = (key: string) =>
-    EDUCATION_LEVELS.find((e) => e.key === key)?.name || key;
+  const getEducationLevelName = (key: number) =>
+    EDUCATION_LEVELS.find((e) => e.key === key)?.name || String(key);
 
-  const getTimelineName = (key: string) =>
-    STUDY_TIMELINES.find((t) => t.key === key)?.name || key;
+  const getTimelineName = (key: number) =>
+    STUDY_TIMELINES.find((t) => t.key === key)?.name || String(key);
 
-  const getBudgetName = (key: string) =>
-    EDUCATION_FUNDS.find((b) => b.key === key)?.name || key;
+  const getBudgetName = (key: number) =>
+    EDUCATION_FUNDS.find((b) => b.key === key)?.name || String(key);
+
 
   if (loading) {
     return <div className="p-6">Loading enquiries...</div>;
