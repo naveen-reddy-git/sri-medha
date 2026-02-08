@@ -1,4 +1,6 @@
 import { Star, Quote } from 'lucide-react';
+import priyaSharmaImg from '../assets/images/priya sharma.jpeg';
+import madhuImg from '../assets/images/madhu.jpeg';
 
 const testimonials = [
   {
@@ -10,18 +12,18 @@ const testimonials = [
     text: "Sri Medha Global Connect made my dream of studying at Stanford a reality. Their guidance throughout the application process was invaluable."
   },
   {
-    name: "Rahul Verma",
+    name: "Madhu",
     university: "University of Toronto, Canada",
     course: "MBA",
-    image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: priyaSharmaImg,
     rating: 5,
     text: "The team's expertise in visa processing and documentation helped me secure admission to my dream university without any hassles."
   },
   {
-    name: "Ananya Reddy",
+    name: "Rahul",
     university: "University of Melbourne, Australia",
     course: "MS in Data Science",
-    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: madhuImg,
     rating: 5,
     text: "Their personalized counselling and financial aid guidance made studying abroad affordable. Forever grateful to the Sri Medha team!"
   }

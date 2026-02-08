@@ -71,18 +71,6 @@ export default function Hero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-teal-900/20 to-transparent"></div>
             </div>
-
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl">
-              <div className="flex items-center gap-3">
-                <div className="bg-teal-100 p-3 rounded-lg">
-                  <GraduationCap className="text-teal-600" size={24} />
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-gray-900">100%</div>
-                  <div className="text-sm text-gray-600">Success Rate</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

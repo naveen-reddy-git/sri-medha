@@ -47,20 +47,6 @@ export default function StudyInUSA() {
               Best USA Education Consultants in Hyderabad
             </h2>
           </div>
-
-          {/* YouTube Video */}
-          <div className="flex justify-center mb-12">
-            <div className="w-full max-w-4xl aspect-video">
-              <iframe
-                className="w-full h-full rounded-lg shadow-lg"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Study in USA - Sri Medha Global Connect"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
         </div>
 
         <div className="max-w-6xl mx-auto">

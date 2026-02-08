@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import refinanceBanner from "../assets/images/re-finance.jpg";
+import refinanceBanner from "../assets/images/loan-transfer.jpg";
 import {
   CheckCircle,
   TrendingDown,

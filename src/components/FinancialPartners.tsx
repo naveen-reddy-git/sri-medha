@@ -10,6 +10,8 @@ import avanse from "../assets/images/avanse bank.png";
 import credila from "../assets/images/credils bsnk.png";
 import auxilo from "../assets/images/auxilo bank.png";
 import mpower from "../assets/images/mpower.png";
+import pnb from "../assets/images/pnb-bank.jpg";
+import canara from "../assets/images/canara bank.jpg";
 
 const partners = [
   { name: "Tata Capital", logo: tataCapital },
@@ -23,6 +25,8 @@ const partners = [
   { name: "Credila", logo: credila },
   { name: "Auxilo", logo: auxilo },
   { name: "MPower Financing", logo: mpower },
+  { name: "Punjab National Bank", logo: pnb },
+  { name: "Canara Bank", logo: canara }
 ];
 
 const benefits = [

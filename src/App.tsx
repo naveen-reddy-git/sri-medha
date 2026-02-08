@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import SuccessStories from './components/SuccessStories';
@@ -17,6 +18,20 @@ import EducationLoanRefinance from './pages/EducationLoanRefinance';
 import StudentEnquiries from "./pages/StudentEnquiries";
 
 function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Handle scroll to section from navigation state
+    if (location.state?.scrollTo) {
+      setTimeout(() => {
+        const element = document.getElementById(location.state.scrollTo);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <>
       <Header />
