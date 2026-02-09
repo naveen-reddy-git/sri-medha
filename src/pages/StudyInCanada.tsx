@@ -45,14 +45,7 @@ export default function StudyInCanada() {
             Best Canada Education Consultants in Hyderabad
           </h1>
           <p className="text-gray-700 leading-relaxed">
-            Canada is one of the most preferred study destinations for
-            international students due to its world-class education system,
-            affordable tuition fees, multicultural environment, and excellent
-            post-study work and PR opportunities. Canadian universities and
-            colleges are globally recognized for academic excellence, research,
-            and industry-focused programs. With Triospace Overseas, students
-            receive complete end-to-end guidance — from course selection and
-            admissions to visas, accommodation, and pre-departure support.
+Canada is one of the most preferred study destinations for international students due to its world-class education system, affordable tuition fees, multicultural environment, and excellent post-study work and PR opportunities. Canadian universities and colleges are globally recognized for academic excellence, research, and industry-focused programs. Srimedha global connect , students receive complete end-to-end guidance — from course selection and admissions to visas, accommodation, and pre-departure support.
           </p>
         </div>
       </section>

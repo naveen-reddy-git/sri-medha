@@ -43,13 +43,7 @@ export default function StudyInIreland() {
             Best Ireland Education Consultants in Hyderabad
           </h1>
           <p className="text-gray-700 leading-relaxed">
-            Ireland has emerged as one of Europe’s most attractive destinations
-            for international students, particularly for IT, Data Science,
-            Business, and Pharmaceutical studies. With globally ranked
-            universities, strong industry connections, and generous post-study
-            work options, Ireland offers exceptional academic and career
-            opportunities. Triospace Overseas guides students at every step —
-            from university selection to visa success.
+Ireland has emerged as one of  the most attractive destinations for international students, particularly for IT, Data Science, Business, and Pharmaceutical studies. With globally ranked universities, strong industry connections, and generous post-study work options, Ireland offers exceptional academic and career opportunities. Srimedha global connect ,guides students at every step — from university selection to visa success.
           </p>
         </div>
       </section>

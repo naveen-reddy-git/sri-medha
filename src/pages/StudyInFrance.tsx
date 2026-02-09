@@ -51,22 +51,8 @@ export default function StudyInFrance() {
 
           <div className="max-w-6xl mx-auto">
             <p className="text-gray-700 leading-relaxed mb-6">
-              France is one of Europe’s most preferred study destinations,
-              offering world-class education at affordable tuition fees.
-              Renowned for excellence in engineering, business, fashion,
-              hospitality, and research, France hosts several globally ranked
-              universities and Grandes Écoles. With a strong emphasis on
-              innovation, research, and industry collaboration, France provides
-              international students with exceptional academic exposure and
-              career prospects.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              At Triospace Overseas, we simplify your journey to studying in
-              France with expert counselling, university shortlisting,
-              application assistance, visa guidance, and scholarship support.
-              As trusted France education consultants in Hyderabad, we ensure
-              your overseas education journey is smooth, transparent, and
-              successful.
+              France is one of Europe’s most preferred study destinations, offering world-class education at affordable tuition fees. Renowned for excellence in engineering, business, fashion, hospitality, and research, France hosts several globally ranked universities and Grandes Écoles. With a strong emphasis on innovation, research, and industry collaboration, France provides international students with exceptional academic exposure and career prospects.
+              At Srimedha global connect, we simplify your journey to studying in France with expert counselling, university shortlisting, application assistance, visa guidance, and scholarship support. As trusted France education consultants in Hyderabad, we ensure your overseas education journey is smooth, transparent, and successful.
             </p>
           </div>
         </div>

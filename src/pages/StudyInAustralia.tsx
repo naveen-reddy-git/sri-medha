@@ -50,20 +50,8 @@ export default function StudyInAustralia() {
 
           <div className="max-w-6xl mx-auto">
             <p className="text-gray-700 leading-relaxed mb-6">
-              Australia is one of the most preferred study destinations for
-              international students, known for its globally ranked
-              universities, high-quality education system, and excellent
-              lifestyle. Australian institutions emphasize practical learning,
-              research, and industry exposure, making graduates highly
-              employable worldwide.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              At Triospace Overseas, we provide complete guidance for students
-              aspiring to study in Australia — from course selection and
-              university admissions to visa assistance and pre-departure
-              support. As trusted Australia education consultants in Hyderabad,
-              we help you achieve your international education goals with
-              confidence.
+              Australia is one of the most preferred study destinations for international students, known for its globally ranked universities, high-quality education system, and excellent lifestyle. Australian institutions emphasize practical learning, research, and industry exposure, making graduates highly employable worldwide.
+              At Srimedha global connect, we provide complete guidance for students aspiring to study in Australia — from course selection and university admissions to visa assistance and pre-departure support. As trusted Australia education consultants in Hyderabad, we help you achieve your international education goals with confidence.
             </p>
           </div>
         </div>
