@@ -3,6 +3,12 @@ import Footer from '../components/Footer';
 import ukbanner from "../assets/images/study-in-uk.jpg";
 import studyabroad from "../assets/images/study-in-abroad.webp";
 import StudentForm from "../components/StudentForm";
+// UK University Images
+import cambridgeImg from "../assets/images/University of Cambridge.png";
+import imperialImg from "../assets/images/Imperial College London.png";
+import lseImg from "../assets/images/London School of Economics and Political Science (LSE).png";
+import uclImg from "../assets/images/University College London (UCL).jpg";
+import edinburghImg from "../assets/images/University of Edinburgh.png";
 import {
   COUNTRIES,
   COURSES,
@@ -27,6 +33,14 @@ import {
   Languages,
   Globe,
 } from 'lucide-react';
+
+const ukUniversityMap: { [key: string]: string } = {
+  'University of Cambridge': cambridgeImg,
+  'Imperial College London': imperialImg,
+  'London School of Economics and Political Science (LSE)': lseImg,
+  'University College London (UCL)': uclImg,
+  'University of Edinburgh': edinburghImg,
+};
 
 export default function StudyInUK() {
   return (
@@ -212,10 +226,24 @@ export default function StudyInUK() {
             ].map((university, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-blue-50 to-teal-50 p-6 rounded-lg shadow-md hover:shadow-xl transition"
+                className="bg-white rounded-lg shadow-md hover:shadow-xl transition overflow-hidden group cursor-pointer"
               >
-                <Building2 className="w-8 h-8 text-blue-600 mb-3" />
-                <h3 className="text-lg font-semibold text-gray-900">{university}</h3>
+                {ukUniversityMap[university] ? (
+                  <div className="w-full h-48 bg-gray-200 overflow-hidden flex items-center justify-center">
+                    <img
+                      src={ukUniversityMap[university]}
+                      alt={university}
+                      className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-full h-48 bg-gradient-to-br from-blue-50 to-teal-50 flex items-center justify-center">
+                    <Building2 className="w-12 h-12 text-blue-600" />
+                  </div>
+                )}
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-gray-900 text-center">{university}</h3>
+                </div>
               </div>
             ))}
           </div>

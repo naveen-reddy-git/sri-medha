@@ -24,6 +24,24 @@ import {
   Users
 } from 'lucide-react';
 
+// Canadian University Images
+import torontoImg from "../assets/images/University of Toronto.png";
+import ubcImg from "../assets/images/University of British Columbia.png";
+import mcgillImg from "../assets/images/McGill University.png";
+import albertaImg from "../assets/images/University of Alberta.jpg";
+import waterlooImg from "../assets/images/University of Waterloo.jpg";
+import yorkImg from "../assets/images/york university.jpg";
+
+// Canadian University Images mapping
+const canadianUniversityMap: { [key: string]: string } = {
+  'University of Toronto': torontoImg,
+  'University of British Columbia': ubcImg,
+  'McGill University': mcgillImg,
+  'University of Alberta': albertaImg,
+  'University of Waterloo': waterlooImg,
+  'York University': yorkImg,
+};
+
 export default function StudyInCanada() {
   return (
     <div className="min-h-screen bg-white">
@@ -163,10 +181,18 @@ Canada is one of the most preferred study destinations for international student
             ].map((uni, index) => (
               <div
                 key={index}
-                className="p-6 bg-white rounded-xl shadow"
+                className="bg-white rounded-lg shadow-md hover:shadow-xl transition overflow-hidden group cursor-pointer"
               >
-                <Building2 className="mb-2 text-red-600" />
-                <h3 className="font-semibold">{uni}</h3>
+                <div className="w-full h-48 bg-gray-200 overflow-hidden flex items-center justify-center">
+                  <img
+                    src={canadianUniversityMap[uni]}
+                    alt={uni}
+                    className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-gray-900 text-center">{uni}</h3>
+                </div>
               </div>
             ))}
           </div>

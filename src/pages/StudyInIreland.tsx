@@ -26,6 +26,20 @@ import {
   Languages
 } from 'lucide-react';
 
+// Irish University Images
+import trinityImg from "../assets/images/Trinity College Dublin.png";
+import ucdImg from "../assets/images/University College Dublin.jpg";
+import galwayImg from "../assets/images/University of Galway.png";
+import dcuImg from "../assets/images/Dublin City University.png";
+
+// Irish University Images mapping
+const irishUniversityMap: { [key: string]: string } = {
+  'Trinity College Dublin': trinityImg,
+  'University College Dublin': ucdImg,
+  'University of Galway': galwayImg,
+  'Dublin City University': dcuImg,
+};
+
 export default function StudyInIreland() {
   return (
     <div className="min-h-screen bg-white">
@@ -136,15 +150,27 @@ Ireland has emerged as one of  the most attractive destinations for internationa
               Study at prestigious institutions recognized worldwide for academic excellence
             </p>
           </div>
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 px-4">
           {[
             'Trinity College Dublin',
             'University College Dublin',
             'University of Galway',
             'Dublin City University'
           ].map((u, i) => (
-            <div key={i} className="p-6 bg-blue-50 rounded-xl">
-              <Building2 className="mb-2" /> {u}
+            <div
+              key={i}
+              className="bg-white rounded-lg shadow-md hover:shadow-xl transition overflow-hidden group cursor-pointer"
+            >
+              <div className="w-full h-48 bg-gray-200 overflow-hidden flex items-center justify-center">
+                <img
+                  src={irishUniversityMap[u]}
+                  alt={u}
+                  className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-gray-900 text-center">{u}</h3>
+              </div>
             </div>
           ))}
         </div>

@@ -25,6 +25,24 @@ import {
   Briefcase,
 } from 'lucide-react';
 
+// Australian University Images
+import melbourneImg from "../assets/images/University of Melbourne.png";
+import anuImg from "../assets/images/Australian National University.png";
+import sydneyImg from "../assets/images/University of Sydney.png";
+import monashImg from "../assets/images/Monash University.png";
+import queenslandImg from "../assets/images/University of Queensland.png";
+import unswImg from "../assets/images/University of New South Wales.png";
+
+// Australian University Images mapping
+const australianUniversityMap: { [key: string]: string } = {
+  'University of Melbourne': melbourneImg,
+  'Australian National University': anuImg,
+  'University of Sydney': sydneyImg,
+  'Monash University': monashImg,
+  'University of Queensland': queenslandImg,
+  'University of New South Wales': unswImg,
+};
+
 export default function StudyInAustralia() {
   return (
     <div className="min-h-screen bg-white">
@@ -172,9 +190,23 @@ export default function StudyInAustralia() {
             'University of Queensland',
             'University of New South Wales'
           ].map((u, i) => (
-            <div key={i} className="bg-blue-50 p-6 rounded-xl">
-              <Building2 className="mb-2" />
-              {u}
+            <div key={i} className="bg-white rounded-lg shadow-md hover:shadow-xl transition overflow-hidden group cursor-pointer">
+              {australianUniversityMap[u] ? (
+                <div className="w-full h-48 bg-gray-200 overflow-hidden flex items-center justify-center">
+                  <img
+                    src={australianUniversityMap[u]}
+                    alt={u}
+                    className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ) : (
+                <div className="w-full h-48 bg-gradient-to-br from-blue-50 to-teal-50 flex items-center justify-center">
+                  <Building2 className="w-12 h-12 text-blue-600" />
+                </div>
+              )}
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-gray-900 text-center">{u}</h3>
+              </div>
             </div>
           ))}
         </div>

@@ -26,6 +26,24 @@ import {
   Globe,
 } from 'lucide-react';
 
+// French University Images
+import sorbonneImg from "../assets/images/Sorbonne University.png";
+import hecImg from "../assets/images/HEC Paris.jpg";
+import inseadImg from "../assets/images/INSEAD.png";
+import polytechniqueImg from "../assets/images/École Polytechnique.png";
+import pslImg from "../assets/images/PSL University.png";
+import sciencePoImg from "../assets/images/Sciences Po.png";
+
+// French University Images mapping
+const frenchUniversityMap: { [key: string]: string } = {
+  'Sorbonne University': sorbonneImg,
+  'HEC Paris': hecImg,
+  'INSEAD': inseadImg,
+  'École Polytechnique': polytechniqueImg,
+  'PSL University': pslImg,
+  'Sciences Po': sciencePoImg,
+};
+
 export default function StudyInFrance() {
   return (
     <div className="min-h-screen bg-white">
@@ -213,9 +231,20 @@ export default function StudyInFrance() {
             'PSL University',
             'Sciences Po',
           ].map((u, i) => (
-            <div key={i} className="bg-blue-50 p-6 rounded-xl">
-              <Building2 className="mb-2" />
-              {u}
+            <div
+              key={i}
+              className="bg-white rounded-lg shadow-md hover:shadow-xl transition overflow-hidden group cursor-pointer"
+            >
+              <div className="w-full h-48 bg-gray-200 overflow-hidden flex items-center justify-center">
+                <img
+                  src={frenchUniversityMap[u]}
+                  alt={u}
+                  className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-gray-900 text-center">{u}</h3>
+              </div>
             </div>
           ))}
         </div>

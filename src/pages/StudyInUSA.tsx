@@ -3,6 +3,31 @@ import Footer from '../components/Footer';
 import usabanner from "../assets/images/study-in-usa-banner.jpg";
 import studyAbroadBg from "../assets/images/study-in-abroad.webp";
 import StudentForm from "../components/StudentForm";
+// University Images
+import harvardImg from "../assets/images/hardvard university.png";
+import stanfordImg from "../assets/images/satnford university.png";
+import mitImg from "../assets/images/mit university.jpg";
+import yaleImg from "../assets/images/yale university.png";
+import princetonImg from "../assets/images/Princeton University.jpg";
+import columbiaImg from "../assets/images/Columbia University.png";
+import chicagoImg from "../assets/images/University of Chicago.png";
+import pennsylvaniaImg from "../assets/images/University of Pennsylvania.png";
+import caltechImg from "../assets/images/California Institute of Technology (Caltech).png";
+import dukeImg from "../assets/images/Duke University.png";
+import northwesternImg from "../assets/images/Northwestern University.png";
+import hopkinsImg from "../assets/images/Johns Hopkins University.png";
+import cornellImg from "../assets/images/Cornell University.jpg";
+import berkeleyImg from "../assets/images/University of California, Berkeley.png";
+import michiganImg from "../assets/images/University of Michigan.png";
+import carnegieImg from "../assets/images/Carnegie Mellon University.png";
+import nyuImg from "../assets/images/New York University.png";
+import uclaImg from "../assets/images/University of California, Los Angeles (UCLAlogo.png";
+import uscImg from "../assets/images/University of Southern California.png";
+import bostonImg from "../assets/images/Boston University.png";
+import georgiaImg from "../assets/images/Georgia Institute of Technology.png";
+import washingtonImg from "../assets/images/University of Washington.png";
+import texasImg from "../assets/images/University of Texas at Austin.png";
+import illinoisImg from "../assets/images/University of Illinois Urbana-Champaign.png";
 import {
   COUNTRIES,
   COURSES,
@@ -25,6 +50,33 @@ import {
   ChevronDown,
   ChevronUp,
 } from 'lucide-react';
+
+const universityMap: { [key: string]: string } = {
+  'Harvard University': harvardImg,
+  'Stanford University': stanfordImg,
+  'Massachusetts Institute of Technology (MIT)': mitImg,
+  'Yale University': yaleImg,
+  'Princeton University': princetonImg,
+  'Columbia University': columbiaImg,
+  'University of Chicago': chicagoImg,
+  'University of Pennsylvania': pennsylvaniaImg,
+  'California Institute of Technology (Caltech)': caltechImg,
+  'Duke University': dukeImg,
+  'Northwestern University': northwesternImg,
+  'Johns Hopkins University': hopkinsImg,
+  'Cornell University': cornellImg,
+  'University of California, Berkeley': berkeleyImg,
+  'University of Michigan': michiganImg,
+  'Carnegie Mellon University': carnegieImg,
+  'New York University': nyuImg,
+  'University of California, Los Angeles (UCLA)': uclaImg,
+  'University of Southern California': uscImg,
+  'Boston University': bostonImg,
+  'Georgia Institute of Technology': georgiaImg,
+  'University of Washington': washingtonImg,
+  'University of Texas at Austin': texasImg,
+  'University of Illinois Urbana-Champaign': illinoisImg,
+};
 
 export default function StudyInUSA() {
   return (
@@ -234,10 +286,18 @@ export default function StudyInUSA() {
             ].map((university, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-blue-50 to-teal-50 p-6 rounded-lg shadow-md hover:shadow-xl transition"
+                className="bg-white rounded-lg shadow-md hover:shadow-xl transition overflow-hidden group cursor-pointer"
               >
-                <Building2 className="w-8 h-8 text-blue-600 mb-3" />
-                <h3 className="text-lg font-semibold text-gray-900">{university}</h3>
+                <div className="w-full h-48 bg-gray-200 overflow-hidden flex items-center justify-center">
+                  <img
+                    src={universityMap[university]}
+                    alt={university}
+                    className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-gray-900 text-center">{university}</h3>
+                </div>
               </div>
             ))}
           </div>
