@@ -1,13 +1,14 @@
 import { Star, Quote } from 'lucide-react';
 import priyaSharmaImg from '../assets/images/priya sharma.jpeg';
 import madhuImg from '../assets/images/madhu.jpeg';
+import anilImg from '../assets/images/anil.jpg';
 
 const testimonials = [
   {
-    name: "Priya Sharma",
-    university: "Stanford University, USA",
+    name: "Anil",
+    university: "University of California, USA",
     course: "MS in Computer Science",
-    image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: anilImg,
     rating: 5,
     text: "Sri Medha Global Connect made my dream of studying at Stanford a reality. Their guidance throughout the application process was invaluable."
   },
